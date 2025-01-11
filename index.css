@@ -20,7 +20,9 @@ nav.navbar a {
   align-items: center;
   width: 50vw;
 }
-
+section {
+  background-color: #f9f9f9AA;
+}
 .list .list_container {
   height: 80%;
   width: 80%;
