@@ -1,0 +1,109 @@
+* {
+  margin:0;
+  padding: 0;
+  border: 0;
+}
+::-webkit-scrollbar {
+  width: 0px;
+}
+
+nav.navbar {
+  box-shadow: 0px 0px 5px rgba(0,0,0,0.1);
+}
+nav.navbar a {
+  text-decoration: none;
+}
+.list{
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50vw;
+}
+
+.list .list_container {
+  height: 80%;
+  width: 80%;
+}
+.card {
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+  border: none
+}
+
+.list .card img {
+  /* width: 100px;
+  height: 100px; */
+}
+
+.btc-coin {
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50vw;
+}
+
+.btc-coin img {
+  width: 70%;
+}
+.banner {
+  /* height: 100px; */
+  /* background-image: url("./_.webp") */
+}
+.btc {
+  /* border: 1px solid #000; */
+  width: 280px;
+  height: 280px;
+  color: #fff;
+  top:50%;
+  left:50%;
+  transform-style: preserve-3d;
+  animation: rotate 6s linear infinite;
+  /* position: relative; */
+}
+
+.btc:before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: #333;
+  border-radius: 50%;
+  position: absolute;
+  transform: translateZ(5px);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.btc:after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-image: url("https://github.com/berru-g/web3.0/blob/main/src/img/btc-coin.png?raw=true");
+  transform: reverse;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  border-radius: 50%;
+  position: absolute;
+  transform: translateZ(-5px) scaleX(-1);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+@keyframes rotate {
+  0% {
+    transform: translate(-50%, -50%) perspective(500px) rotateY(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) perspective(500px) rotateY(360deg);
+  }
+}
+
+@media (max-width: 576px) {
+  .list{
+    height: 50vh;
+    width: 100vw;
+  }
+  .btc-coin {
+    height: 90vh;
+    width: 100vw;
+  }
+}
